@@ -1,8 +1,8 @@
 # This file is app/controllers/movies_controller.rb
 class MoviesController < ApplicationController
   def index
-    @sort_by = params[:sort_by]
-    @ratings = params[:ratings]
+    @sort_by = params[:sort_by] ? params[:sort_by] : session[:sort_by]
+    @ratings = params[:ratings] ? params[:ratings] : session[:ratings]
     @movies = Movie.all
 
     if (@ratings != nil) then
@@ -13,12 +13,15 @@ class MoviesController < ApplicationController
     else
       @ratings = Movie.all_ratings
     end
-    
+
     if (@sort_by == 'title') then
       @movies = @movies.order(title: :asc)
     elsif (@sort_by == 'release_date') then
       @movies = @movies.order(release_date: :asc)
     end
+
+    session[:sort_by] = @sort_by
+    session[:ratings] = @ratings
 
     @title_header = "title_header_class"
     @release_date_header = "release_date_header_class"
