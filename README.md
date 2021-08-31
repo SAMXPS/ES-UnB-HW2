@@ -1,3 +1,13 @@
+<h1> Engenharia de Software - HW 2 </h1>
+
+```
+Aluno: Samuel James de Lima Barroso
+Matrícula: 19/0019948
+```
+
+Links úteis:
+- How to install ruby on rails on ubuntu: https://gorails.com/setup/ubuntu/18.04
+
 <h1> Part 1: BDD Cucumber/Capybara Warm-up</h1>
 
 This folder implements some features of the RottenPotatoes website. Run cucumber on feature/AddMovie.feature and check if the scenario outcome is "green as a cucumber!". If not, make the appropriate fixes and make it green!
