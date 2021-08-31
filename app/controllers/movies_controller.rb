@@ -9,6 +9,8 @@ class MoviesController < ApplicationController
     else
       @movies = Movie.all
     end
+    @title_header = "title_header_class"
+    @release_date_header = "release_date_header_class"
   end
 
   def show
