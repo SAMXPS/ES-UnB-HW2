@@ -5,7 +5,15 @@ Aluno: Samuel James de Lima Barroso
 Matrícula: 19/0019948
 ```
 
-Links úteis:
+## Notas de Implementação
+Na atividade 3, na parte de sessions, eu simplifiquei um pouco a situação, pois, com o código abaixo:
+```ruby
+@sort_by = params[:sort_by] ? params[:sort_by] : session[:sort_by]
+@ratings = params[:ratings] ? params[:ratings] : session[:ratings]
+```
+É possível ter todas as funcionalidades solicitadas, sem necessidade de redirect_to.
+
+## Links úteis:
 - How to install ruby on rails on ubuntu: https://gorails.com/setup/ubuntu/18.04
 
 <h1> Part 1: BDD Cucumber/Capybara Warm-up</h1>
